@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Validation Practice</title>
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Font Awesome for Icons -->
+    <script src="https://kit.fontawesome.com/d8f052c6cf.js" crossorigin="anonymous" defer></script>
+    <script type="text/javascript" src="./index.js" defer></script>
+
+</head>
+
+<body>
+    <!-- Container for entire form. -->
+    <div class="form-container">
+        <!-- Registration Side -->
+        <div>
+            <h1>Register</h1>
+            <p>Please provide your information below.</p>
+
+            <!-- Registration Form -->
+            <form id="registration">
+                <input name="username" type="text" placeholder="Username" required />
+                <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
+
+                <input name="email" type="email" placeholder="Email" required />
+                <span class="input-icon"><i class="fa-solid fa-envelope"></i></span><br />
+
+                <input name="password" type="password" id = "password1" placeholder="Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+]).{12,}$" minlength = "12" required 
+                               
+                />
+                <span class="input-icon"><i class="fa-solid fa-key"></i></span><br />
+
+                <input name="passwordCheck" type="password" id = "password2" placeholder="Repeat Password" minlength = "12" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+]).{12,}$" required />
+                <span class="input-icon"><i class="fa-solid fa-key"></i></span><br /><br />
+
+                <div class="flex-row">
+                    <input name="terms" type="checkbox" required />
+                    <label for="terms">I agree to the <a href="#">Terms of Use</a>.</label>
+                    <input type="submit" value="Register" />
+                </div>
+            </form>
+        </div>
+
+        <!-- Login Side -->
+        <div>
+            <h1>Login</h1>
+            <p>Login using your account information.</p>
+
+            <!-- Login Form -->
+            <form id="login" style="border-bottom: 1px solid lightgray;" >
+                <input name="username" type="text" placeholder="Username" required />
+                <span class="input-icon"><i class="fa-solid fa-user"></i></span><br />
+
+                <input name="password" type="password" placeholder="Password" minlength = "12" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+]).{12,}$" required />
+                <span class="input-icon"><i class="fa-solid fa-key"></i></span><br /><br />
+
+                <div class="flex-row">
+                    <input name="persist" type="checkbox" />
+                    <label for="persist">Keep me logged in.</label>
+                    <input type="submit" value="Login" />
+                </div>
+                <br /><br />
+            </form>
+
+            <p>Forgot your <a href="#">Username</a> or <a href="#">Password?</a></p>
+        </div>
+    </div>
+
+    <!-- Error Display Container -->
+    <div id="errorDisplay"></div>
+</body>
+
+</html>

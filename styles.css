@@ -1,0 +1,120 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: Calibri;
+}
+body {
+  background: linear-gradient(-45deg, #0079c0, #0097a7, #4285f4);
+  color: #888;
+}
+.form-container {
+  position: absolute;
+  background: #eee;
+  display: flex;
+  width: 700px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.25);
+  user-select: none;
+}
+.form-container > div {
+  width: 300px;
+  margin: 10px;
+  padding: 5px;
+}
+.form-container h1 {
+  color: #0097a7;
+  margin: 0px 5px;
+  padding: 5px;
+  border-bottom: 1px solid lightgray;
+}
+.form-container form {
+  position: relative;
+  width: 100%;
+  padding: 5px 10px;
+}
+.form-container p {
+  padding: 5px 10px;
+  margin: 2.5px 0px;
+}
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"] {
+  width: 250px;
+  padding: 7px 7px 7px 40px;
+  margin: 5px 0px;
+  outline: 1px solid #888;
+  border: 0px solid #0000;
+  border-radius: 5px;
+}
+.form-container input[type="text"]:focus,
+.form-container input[type="email"]:focus,
+.form-container input[type="password"]:focus {
+  outline: 2px solid #ffab40;
+}
+.form-container input[type="checkbox"] {
+  margin-right: 10px;
+}
+.flex-row {
+  display: flex;
+  align-items: center;
+}
+.form-container label {
+  align-items: center;
+  cursor: pointer;
+}
+.form-container input[type="submit"] {
+  margin-left: auto;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  background: #55ecfc;
+  cursor: pointer;
+}
+.form-container input[type="submit"]:hover {
+  background: #ffab40;
+}
+.form-container .input-icon {
+  position: absolute;
+  left: 10px;
+  margin: 5px 0px;
+  width: 30px;
+  height: 29px;
+  background: #ddd;
+  outline: 1px solid #888;
+  border-right: 0px solid #0000;
+  border-radius: 5px 0px 0px 5px;
+  text-align: center;
+  line-height: 29px;
+}
+.form-container input:focus + .input-icon {
+  color: #ffab40;
+  outline: 2px solid #ffab40;
+  margin: 5px 0px;
+}
+a {
+  color: #0097a7;
+  text-decoration: none;
+}
+a:hover {
+  color: #ffab40;
+}
+#errorDisplay {
+  position: absolute;
+  background: #fcc;
+  color: red;
+  display: flex;
+  width: 500px;
+  left: 50%;
+  top: calc(50% + 180px);
+  transform: translate(-50%, 0%);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.25);
+  user-select: none;
+  padding: 20px;
+  display: none;
+}
